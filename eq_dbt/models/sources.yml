@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: dev
+    schema: raw_data
+    description: "earthquake raw data loaded by the ETL process"
+    tables:
+      - name: earthquake_data
+        identifier: earthquake_data
+        description: "earthquake raw data from Snowflake"

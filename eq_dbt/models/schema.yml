@@ -1,0 +1,23 @@
+models:
+  - name: earthquake_info
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: magnitude
+        tests:
+          - not_null
+  - name: data_reliability_check
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: magnitude
+        tests:
+          - not_null
+      - name: processing_status
+        tests:
+          - accepted_values:
+              values: ['automatic', 'reviewed']
